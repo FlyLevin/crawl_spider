@@ -1,7 +1,7 @@
 from log_ctl import g_log
 import pymysql
 
-def create_new_connect(host='127.0.0.1', unix_socket='/var/run/mysqld/mysqld.sock', user='root', passwd='trend#11', db='mysql'):
+def create_new_connect(host='127.0.0.1', unix_socket='/var/run/mysqld/mysqld.sock', user='root', passwd='#####', db='mysql'):
     g_log.debug('now try to connect the db with %s, %s, %s, %s, %s' % (host, unix_socket, user, passwd, db))
     try:
         conn = pymysql.connect(host=host, unix_socket=unix_socket, user=user, passwd=passwd, db=db, use_unicode=True, charset="utf8")
